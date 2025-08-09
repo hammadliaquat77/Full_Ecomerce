@@ -62,8 +62,7 @@ function Home() {
             </div>
             <div className='relative w-full md:w-64 bg-gray-300 p-2 hover:transition-all hover:scale-105 md:hover:scale-110 cursor-pointer duration-300'>
               <div className='flex flex-col'>
-                <img src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wfGVufDB8fDB8fHww" alt="Service Icon" className='mb-4' />
-                {/* <img src={image} alt="Service Icon" className='mb-4' /> */}
+                <img src="https://images.unsplash.com/photo-1608386390658-86cf60bcf61a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fElwaG9uZXxlbnwwfDB8MHx8fDA%3D" alt="Service Icon" className='mb-4' />
                 <div className='absolute py-1 px-3 rounded-full bg-neutral-200 top-5 right-4'>laptop</div>
                 <div className='flex justify-between'>
                   <p className='text-gray-600 text-md'>Makebook</p>
@@ -73,7 +72,7 @@ function Home() {
             </div>
             <div className='relative w-full md:w-64 bg-gray-300 p-2 hover:transition-all hover:scale-105 md:hover:scale-110 cursor-pointer duration-300'>
               <div className='flex flex-col'>
-                <img src="https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wfGVufDB8fDB8fHww" alt="Service Icon" className='mb-4' />
+                <img src="https://images.unsplash.com/photo-1553545204-4f7d339aa06a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Z2FsYXh5JTIwd2F0Y2h8ZW58MHwwfDB8fHww" alt="Service Icon" className='mb-4' />
                 {/* <img src={image} alt="Service Icon" className='mb-4' /> */}
                 <div className='absolute py-1 px-3 rounded-full bg-neutral-200 top-5 right-4'>laptop</div>
                 <div className='flex justify-between'>
