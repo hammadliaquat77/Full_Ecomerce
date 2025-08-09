@@ -13,7 +13,7 @@ function Header() {
 
   return (
     <div>
-        <div className='w-full bg-blue-900 text-white p-4'>
+        <div className='w-full bg-blue-900 text-white p-4 md:fixed z-50'>
             <div className='container mx-auto flex justify-between items-center'>
                 <h1 className='text-2xl font-bold'>Hammad</h1>
             {/* Desktop */}

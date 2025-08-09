@@ -13,7 +13,7 @@ function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className='container mx-auto md:p-32 p-16'>
+      <section className='container mx-auto md:p-32 p-16 md:pt-48'>
         <div className='flex flex-col md:flex-row justify-between items-center gap-10'>
 
 
@@ -124,9 +124,9 @@ function Home() {
         <section className='bg-gray-100 space-y-36'>
           <div className='container mx-auto md:px-32 p-6' >
             <div>
-              <div className='md:p-16 flex flex-col justify-center items-center space-y-20 p-10'>
+              <div className='md:p-32 md:pt-16 p-14 h-[650px] pt-0 md:h-[320px] flex flex-col justify-center items-center space-y-20  '>
                 <span className='text-xl tracking-wide text-center'>Trusted by over 1000+ customers</span>
-                <div className='grid md:grid-cols-5 grid-cols-2 flex-col gap-14 md:gap-x-14 '>
+                <div className='grid md:grid-cols-5 grid-cols-2 flex-col gap-14 md:gap-x-14  '>
                   <div className='flex flex-col md:flex-row justify-center items-center gap-1 text-gray-600 hover:transition-all hover:scale-125 cursor-pointer duration-300'>
                     <FaMobileAlt size={28} />
                     <span className='text-xl font-bold tracking-wide text-gray-600'>Apple</span>
@@ -157,22 +157,6 @@ function Home() {
           </div>
         </section>
       </section>
-
-
-      {/* Section 4 */}
-      <section className="bg-gray-100 relative mb-[-10px] py-10 md:py-0">
-        <div className="bg-gray-200 p-8 w-4/5 md:w-3/5 mx-auto rounded-lg shadow-lg">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div>
-              <p className="text-sm tracking-wide">Ready to get Started?</p>
-              <span className="text-sm tracking-wide">Talk to us Today</span>
-            </div>
-            <button className="bg-blue-700 text-white px-4 py-3 rounded-lg hover:bg-blue-800 transition">
-              Get Started
-            </button>
-          </div>
-        </div>
-        </section>
 
     </>
   )
