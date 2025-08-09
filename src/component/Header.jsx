@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { FiMenu } from "react-icons/fi";
 import { HiXMark } from "react-icons/hi2";
-
+import { FaShoppingCart } from "react-icons/fa";
 
 function Header() {
 
@@ -22,7 +22,7 @@ function Header() {
                 <NavLink to="/about"  className='text-md hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'>About</NavLink>
                 <NavLink to="/contact" className='text-md hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'>Contact</NavLink>
                 <NavLink to="/products" className='text-md hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'>Products</NavLink>
-                <NavLink to="/cart" className='text-md hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'>Cart</NavLink>
+                <NavLink to="/cart" className='text-md hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'><FaShoppingCart size={24} /></NavLink>
             </div>
 
             {/* Mobile Toggle Btn */}
@@ -39,7 +39,7 @@ function Header() {
                     <NavLink to="/about" onClick={() => setIsOpen(false)} className='block py-2 text-2xl hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'>About</NavLink>
                     <NavLink to="/contact" onClick={() => setIsOpen(false)} className='block py-2 text-2xl hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'>Contact</NavLink>
                     <NavLink to="/products" onClick={() => setIsOpen(false)} className='block py-2 text-2xl hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'>Products</NavLink>
-                    <NavLink to="/cart" onClick={() => setIsOpen(false)} className='block py-2 text-2xl hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'>Cart</NavLink>
+                    <NavLink to="/cart" onClick={() => setIsOpen(false)} className='block py-2 text-2xl hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'><FaShoppingCart size={28} /></NavLink>
                 </div>
             )}
             </div>
