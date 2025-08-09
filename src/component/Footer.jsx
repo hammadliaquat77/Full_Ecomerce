@@ -6,8 +6,8 @@ import { FaLinkedin } from 'react-icons/fa'
 function Footer() {
   return (
     
-    <footer>
-      <div className='bg-gray-800 text-white md:p-14'>
+    <footer className='bg-gray-800 text-white md:p-14'>
+      <div className=' text-white md:-mt-2 mt-16' >
         <div className='container mx-auto md:px-32 p-20 w-full'>
 
           {/* Grid layout for responsiveness */}
@@ -26,7 +26,7 @@ function Footer() {
               <p className='text-sm tracking-wide'>Subscribe to get Important Updates</p>
               <div className='flex flex-col space-y-2'>
                 <input type="text" className='bg-white px-1 py-2 w-full text-black pl-2' placeholder='Your Opinion' />
-                <button className='bg-blue-600 p-2 py-3 rounded-lg uppercase hover:bg-blue-800'>
+                <button className='bg-blue-600 py-2 w-28 rounded-lg uppercase hover:bg-blue-800'>
                   Subscribe
                 </button>
               </div>
@@ -54,6 +54,11 @@ function Footer() {
     </footer>
 
 
+
+
+
+
+  
   )
 }
 

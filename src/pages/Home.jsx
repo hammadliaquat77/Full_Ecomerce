@@ -12,7 +12,7 @@ import { RiFridgeFill } from 'react-icons/ri'
 function Home() {
   return (
     <>
-    {/* Hero Section */}
+      {/* Hero Section */}
       <section className='container mx-auto md:p-32 p-16'>
         <div className='flex flex-col md:flex-row justify-between items-center gap-10'>
 
@@ -88,76 +88,92 @@ function Home() {
 
       {/* section 3 */}
       <section className='bg-white' >
-          <div className='container mx-auto md:px-32'>
-            <div className='flex flex-col md:flex-row justify-between items-center gap-10 p-16' >
+        <div className='container mx-auto md:px-32'>
+          <div className='flex flex-col md:flex-row justify-between items-center gap-10 p-16' >
             {/* card 1 */}
-             <div className='w-full md:w-72 md:h-64 p-10 md:p-0 bg-gray-300 rounded-2xl flex flex-col justify-center items-center space-y-4 hover:transition-all hover:scale-110 cursor-pointer duration-300'>
-                 <ImTruck size={28} color='green' />
-                <span className='text-md tracking-wide '>Super Fast & Free Delivery</span>
-             </div>
+            <div className='w-full md:w-72 md:h-64 p-10 md:p-0 bg-gray-300 rounded-2xl flex flex-col justify-center items-center space-y-4 hover:transition-all hover:scale-110 cursor-pointer duration-300'>
+              <ImTruck size={28} color='green' />
+              <span className='text-md tracking-wide '>Super Fast & Free Delivery</span>
+            </div>
 
-              <div className='flex flex-col justify-between items-center gap-10 '>
+            <div className='flex flex-col justify-between items-center gap-10 '>
               {/* card 2 */}
-                <div className='w-full md:w-72 md:h-28 p-6 md:p-0 bg-gray-300 rounded-2xl flex  gap-6 justify-center items-center space-y-4 hover:transition-all hover:scale-110 cursor-pointer duration-300'>
-                 <MdOutlineSecurity  size={28}  color='green' />
+              <div className='w-full md:w-72 md:h-28 p-6 md:p-0 bg-gray-300 rounded-2xl flex  gap-6 justify-center items-center space-y-4 hover:transition-all hover:scale-110 cursor-pointer duration-300'>
+                <MdOutlineSecurity size={28} color='green' />
                 <span className='text-md tracking-wide '>Non Contract Shipping</span>
-                </div>
+              </div>
 
               {/* card 3 */}
-                <div className='w-full md:w-72 md:h-28 p-6  md:p-0 bg-gray-300 rounded-2xl flex gap-6 justify-center items-center space-y-4 hover:transition-all hover:scale-110 cursor-pointer duration-300'>
-                 <FaRegMoneyBillAlt size={28} color='green' />
+              <div className='w-full md:w-72 md:h-28 p-6  md:p-0 bg-gray-300 rounded-2xl flex gap-6 justify-center items-center space-y-4 hover:transition-all hover:scale-110 cursor-pointer duration-300'>
+                <FaRegMoneyBillAlt size={28} color='green' />
                 <span className='text-md tracking-wide '>Money Back Guaranted</span>
-                </div>
-
               </div>
 
-              {/* card 4 */}
-               <div className='w-full md:w-72 md:h-64 p-10 md:p-0 bg-gray-300 rounded-2xl flex flex-col justify-center items-center space-y-4 hover:transition-all hover:scale-110 cursor-pointer duration-300'>
-                 <RiSecurePaymentFill size={28} color='green' />
-                <span className='text-md tracking-wide '>Super Secure Payment System </span>
-               </div>
-                
-              </div>
+            </div>
+
+            {/* card 4 */}
+            <div className='w-full md:w-72 md:h-64 p-10 md:p-0 bg-gray-300 rounded-2xl flex flex-col justify-center items-center space-y-4 hover:transition-all hover:scale-110 cursor-pointer duration-300'>
+              <RiSecurePaymentFill size={28} color='green' />
+              <span className='text-md tracking-wide '>Super Secure Payment System </span>
+            </div>
+
           </div>
-      </section>
 
-
-       {/* section 4  */}
-       <section className='bg-gray-100'>
-        <div className='container mx-auto md:px-32 p-6' >
-             <div>
-                 <div className='md:p-16 flex flex-col justify-center items-center space-y-20 p-10'>
-                    <span className='text-xl tracking-wide text-center'>Trusted by over 1000+ customers</span>
-                  <div className='grid md:grid-cols-5 grid-cols-2 flex-col gap-14 md:gap-x-14 '>
-                    <div className='flex flex-col md:flex-row justify-center items-center gap-1 text-gray-600 hover:transition-all hover:scale-125 cursor-pointer duration-300'>
-                       <FaMobileAlt size={28} />
-                       <span className='text-xl font-bold tracking-wide text-gray-600'>Apple</span>
-                    </div>
-
-                    <div className='flex flex-col md:flex-row justify-center items-center gap-1 text-gray-600 hover:transition-all hover:scale-125 cursor-pointer duration-300'>
-                       <MdOutlineLaptopMac size={28} />
-                       <span className='text-xl font-bold tracking-wide text-gray-600'>Hp</span>
-                    </div>
-
-                    <div className='flex flex-col md:flex-row justify-center items-center gap-1 text-gray-600 hover:transition-all hover:scale-125 cursor-pointer duration-300'>
-                       <MdOutlineWatch size={28} />
-                       <span className='text-xl font-bold tracking-wide text-gray-600'>Galaxy</span>
-                    </div>
-
-                    <div className='flex flex-col md:flex-row justify-center items-center gap-1 text-gray-600 hover:transition-all hover:scale-125 cursor-pointer duration-300'>
-                       <TbAirConditioning size={28} />
-                       <span className='text-xl font-bold tracking-wide text-gray-600'>Gree</span>
-                    </div>
-
-                    <div className='flex flex-col md:flex-row justify-center items-center gap-1 text-gray-600 hover:transition-all hover:scale-125 cursor-pointer duration-300'>
-                       <RiFridgeFill size={28} />
-                       <span className='text-xl font-bold tracking-wide text-gray-600'>Dawlance</span>
-                    </div>
-                   </div>
-                 </div>
-             </div>
         </div>
+
+        <section className='bg-gray-100 space-y-36'>
+          <div className='container mx-auto md:px-32 p-6' >
+            <div>
+              <div className='md:p-16 flex flex-col justify-center items-center space-y-20 p-10'>
+                <span className='text-xl tracking-wide text-center'>Trusted by over 1000+ customers</span>
+                <div className='grid md:grid-cols-5 grid-cols-2 flex-col gap-14 md:gap-x-14 '>
+                  <div className='flex flex-col md:flex-row justify-center items-center gap-1 text-gray-600 hover:transition-all hover:scale-125 cursor-pointer duration-300'>
+                    <FaMobileAlt size={28} />
+                    <span className='text-xl font-bold tracking-wide text-gray-600'>Apple</span>
+                  </div>
+
+                  <div className='flex flex-col md:flex-row justify-center items-center gap-1 text-gray-600 hover:transition-all hover:scale-125 cursor-pointer duration-300'>
+                    <MdOutlineLaptopMac size={28} />
+                    <span className='text-xl font-bold tracking-wide text-gray-600'>Hp</span>
+                  </div>
+
+                  <div className='flex flex-col md:flex-row justify-center items-center gap-1 text-gray-600 hover:transition-all hover:scale-125 cursor-pointer duration-300'>
+                    <MdOutlineWatch size={28} />
+                    <span className='text-xl font-bold tracking-wide text-gray-600'>Galaxy</span>
+                  </div>
+
+                  <div className='flex flex-col md:flex-row justify-center items-center gap-1 text-gray-600 hover:transition-all hover:scale-125 cursor-pointer duration-300'>
+                    <TbAirConditioning size={28} />
+                    <span className='text-xl font-bold tracking-wide text-gray-600'>Gree</span>
+                  </div>
+
+                  <div className='flex flex-col md:flex-row justify-center items-center gap-1 text-gray-600 hover:transition-all hover:scale-125 cursor-pointer duration-300'>
+                    <RiFridgeFill size={28} />
+                    <span className='text-xl font-bold tracking-wide text-gray-600'>Dawlance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
+
+
+      {/* Section 4 */}
+      <section className="bg-gray-100 relative mb-[-10px] py-10 md:py-0">
+        <div className="bg-gray-200 p-8 w-4/5 md:w-3/5 mx-auto rounded-lg shadow-lg">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+              <p className="text-sm tracking-wide">Ready to get Started?</p>
+              <span className="text-sm tracking-wide">Talk to us Today</span>
+            </div>
+            <button className="bg-blue-700 text-white px-4 py-3 rounded-lg hover:bg-blue-800 transition">
+              Get Started
+            </button>
+          </div>
+        </div>
+        </section>
+
     </>
   )
 }
