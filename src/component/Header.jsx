@@ -13,7 +13,7 @@ function Header() {
 
   return (
     <div>
-        <div className='w-full bg-blue-900 text-white p-4 md:fixed z-50'>
+        <div className='w-full bg-blue-900 text-white p-4 md:fixed z-50 fixed'>
             <div className='container mx-auto flex justify-between items-center'>
                 <h1 className='text-2xl font-bold'>Hammad</h1>
             {/* Desktop */}
@@ -34,7 +34,7 @@ function Header() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className='absolute top-16 left-0 w-full bg-black h-full flex flex-col justify-center items-center text-white p-4 md:hidden z-50'>
+                <div className='absolute top-16 left-0 w-full bg-black h-full flex flex-col justify-center items-center text-white p-4 md:hidden z-50 fixed'>
                     <NavLink to="/" onClick={() => setIsOpen(false)} className='block py-2 text-2xl hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'>Home</NavLink>
                     <NavLink to="/about" onClick={() => setIsOpen(false)} className='block py-2 text-2xl hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'>About</NavLink>
                     <NavLink to="/contact" onClick={() => setIsOpen(false)} className='block py-2 text-2xl hover:text-gray-500 hover:transition-all duration-300 hover:font-bold'>Contact</NavLink>
