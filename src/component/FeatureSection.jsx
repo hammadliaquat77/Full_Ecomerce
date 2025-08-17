@@ -11,8 +11,18 @@ const FeatureSection = () => {
   const {isLoading, featureProduct} = useContext(AppContext)
  console.log(featureProduct);
 
-if (isLoading) {
-   return <div> ...Loading</div>
+if (isLoading || featureProduct.length === 0) {
+   return(
+ <div class="text-center">
+  <div
+    class="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-yellow-500 mx-auto"
+  ></div>
+  <h2 class="text-zinc-900 dark:text-white mt-4">Loading...</h2>
+  <p class="text-zinc-600 dark:text-zinc-400">
+    Your adventure is about to begin
+  </p>
+</div> 
+   )
 }
 
 
@@ -31,10 +41,9 @@ if (isLoading) {
             <h2 className='text-2xl text-center md:text-start md:text-3xl'>Our Feature Services</h2>
           </div>
 
-          {/* card */}
+          {/* cards */}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 p-14 md:p-0'>
           {featureProduct.map((product, indx)=> {
-            console.log(product);
             return(
              <div key={indx} data-aos="flip-left" className='relative w-full md:w-64 bg-gray-300 p-2 hover:transition-all hover:scale-105 md:hover:scale-110 cursor-pointer duration-300'>
               <div className='flex flex-col'>
