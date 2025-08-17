@@ -1,30 +1,26 @@
-// import React, { useContext } from 'react'
+import React from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-// import { AppContext } from '../Context/Productcontext';
 
 
-function About() {
+function HeroSection() {
 
-  AOS.init({
-    duration: 1000,
-    once: false, 
-    mirror: true,
-  });
-  
-  // use context
-  // const name = useContext(AppContext)
+      AOS.init({
+      duration: 1000,
+      once: false, 
+      mirror: true,
+    });
+    
 
   return (
-      <section className='container mx-auto md:p-32 p-16 md:h-[650px] h-[1000px] md:pt-48 pt-36 overflow-x-hidden'>
+    <section className='container mx-auto md:p-32 p-16 md:pt-48 overflow-x-hidden pt-36'>
         <div className='flex flex-col md:flex-row justify-between items-center gap-10'>
-          
-          {/* <div>{name}</div> */}
+
 
           {/* Left Section */}
-          <div data-aos="fade-up" className='w-full md:w-3/5 space-y-4 text-center md:text-left'>
+          <div data-aos="fade-down" className='w-full md:w-3/5 space-y-4 text-center md:text-left'>
             <span className='text-md tracking-wide'>WELCOME TO</span>
-            <h1 className='text-4xl md:text-5xl font-bold text-center md:text-start'>Hammad Ecomerce</h1>
+            <h1 className='text-4xl md:text-5xl font-bold text-center md:text-start'>Hammad Store</h1>
             <p className='text-gray-700 leading-relaxed'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Molestias, adipisci magni inventore unde odio corrupti
               libero quasi repellendus? Ipsum amet eum porro recusandae
@@ -42,7 +38,8 @@ function About() {
 
         </div>
       </section>
+
   )
 }
 
-export default About
+export default HeroSection
