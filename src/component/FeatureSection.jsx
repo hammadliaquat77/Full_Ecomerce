@@ -11,7 +11,7 @@ const FeatureSection = () => {
   const {isLoading, featureProduct} = useContext(AppContext)
  console.log(featureProduct);
 
-if (isLoading || featureProduct.length === 0) {
+if (isLoading) {
    return(
  <div class="text-center">
   <div
