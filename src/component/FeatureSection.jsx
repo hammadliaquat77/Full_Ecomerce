@@ -2,66 +2,110 @@ import React from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useContext } from 'react';
-import {AppContext} from "../Context/Productcontext"
+import { AppContext } from "../Context/Productcontext"
+import { NavLink } from 'react-router';
 
- 
+
 
 const FeatureSection = () => {
 
-  const {isLoading, featureProduct} = useContext(AppContext)
- console.log(featureProduct);
+  const { isLoading, featureProduct } = useContext(AppContext)
+  console.log(featureProduct);
 
-if (isLoading) {
-   return(
- <div class="text-center">
-  <div
-    class="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-yellow-500 mx-auto"
-  ></div>
-  <h2 class="text-zinc-900 dark:text-white mt-4">Loading...</h2>
-  <p class="text-zinc-600 dark:text-zinc-400">
-    Your adventure is about to begin
-  </p>
-</div> 
-   )
-}
+  if (isLoading) {
+    return (
+      <div className="text-center">
+        <div
+          className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-yellow-500 mx-auto"
+        ></div>
+        <h2 className="text-zinc-900 dark:text-white mt-4">Loading...</h2>
+        <p className="text-zinc-600 dark:text-zinc-400">
+          Your adventure is about to begin
+        </p>
+      </div>
+    )
+  }
 
 
-     AOS.init({
-     duration: 1000,
-     once: false, 
-     mirror: true,
-   });
+  AOS.init({
+    duration: 1000,
+    once: false,
+    mirror: true,
+  });
 
   return (
 
-      <section className='bg-gray-100 overflow-x-hidden'>
-        <div className='container mx-auto md:px-32 md:py-20 md:space-y-10'>
-          <div className='flex flex-col  justify-between md:items-start items-center gap-1 p-10 md:p-0 '>
-            <span className='text-sm tracking-wide uppercase md:text-start text-blue-800'>Click Now</span>
-            <h2 className='text-2xl text-center md:text-start md:text-3xl'>Our Feature Services</h2>
-          </div>
+    <section className='bg-gray-100 overflow-x-hidden'>
+      <div className='container mx-auto md:px-32 md:py-20 md:space-y-10'>
+        <div className='flex flex-col  justify-between md:items-start items-center gap-1 p-10 md:p-0 '>
+          <span className='text-sm tracking-wide uppercase md:text-start text-blue-800'>Click Now</span>
+          <h2 className='text-2xl text-center md:text-start md:text-3xl'>Our Feature Services</h2>
+        </div>
 
-          {/* cards */}
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 p-14 md:p-0'>
-          {featureProduct.map((product, indx)=> {
-            return(
-             <div key={indx} data-aos="flip-left" className='relative w-full md:w-64 bg-gray-300 p-2 hover:transition-all hover:scale-105 md:hover:scale-110 cursor-pointer duration-300'>
+        {/* cards */}
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 p-14 md:p-0'>
+          {featureProduct.map((product) => {
+
+            // currency  convert
+            const formatedPrice = Intl.NumberFormat("en-IN", {
+              style: "currency",
+              currency: "PKR",
+              minimumFractionDigits: 2,
+            }).format(product.price / 100)
+
+            return (
+              <NavLink to={`/singleproduct/${product.id}`} key={product.id}>
+
+                {/* <div data-aos="flip-left" className='relative w-full md:w-64 bg-gray-300 p-2 hover:transition-all hover:scale-105 md:hover:scale-110 cursor-pointer duration-300'>
               <div className='flex flex-col'>
                 <img src={product.image} alt="Service Icon" className='mb-4' />
                 <div className='absolute py-1 px-3 rounded-full bg-neutral-200 top-5 right-4'>{product.category}</div>
                 <div className='flex justify-between'>
                   <p className='text-gray-600 text-md'>{product.name}</p>
-                  <p className='text-gray-600 text-md'>Rs: {product.price}</p>
+                  <p className='text-gray-600 text-md'>{formatedPrice}</p>
                 </div>
               </div>
-            </div>
+            </div> */}
+
+
+
+               <div
+                  data-aos="flip-left"
+                  className="relative w-full md:w-64 bg-gray-300 p-2 cursor-pointer duration-300 group overflow-hidden"
+                >
+                  <div className="relative">
+                    {/* Sliding Overlay */}
+                    <div className="absolute inset-0 bg-black/40 translate-x-full group-hover:translate-x-0 transition-transform duration-300 z-10"></div>
+
+                    {/* Image */}
+                    <img
+                      src={product.image}
+                      alt="Service Icon"
+                      className="mb-4 w-full object-cover transition-transform duration-300 group-hover:scale-105 z-0"
+                    />
+
+                    {/* Category Tag */}
+                    <div className="absolute py-1 px-3 rounded-full bg-neutral-200 top-5 right-4 z-20">
+                      {product.category}
+                    </div>
+                  </div>
+
+                  {/* Info Section */}
+                  <div className="flex justify-between z-20 relative">
+                    <p className="text-gray-600 text-md">{product.name}</p>
+                    <p className="text-gray-600 text-md">{formatedPrice}</p>
+                  </div>
+                </div>
+
+
+                
+              </NavLink>
             )
           })}
-            
-          </div>
-
         </div>
-      </section>
+
+      </div>
+    </section>
 
   )
 }
@@ -121,7 +165,7 @@ export default FeatureSection;
 
 //      AOS.init({
 //      duration: 1000,
-//      once: false, 
+//      once: false,
 //      mirror: true,
 //    });
 
