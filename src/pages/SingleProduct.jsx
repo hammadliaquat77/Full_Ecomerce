@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from "../../public/Fiver_Image_1.png"
 import { TbTruckDelivery } from "react-icons/tb";
+import star from "../../public/star.png"
 
 function SingleProduct() {
   return (
-    <section className='container mx-auto md:p-32 p-10g md:h-[850px] h-[1350px] md:pt-48 pt-36 overflow-x-hidden'>
-      <div className='flex flex-col md:flex-row justify-center items-center'>
+    <section className='container mx-auto md:p-32 p-10g md:h-[850px] h-[1450px] md:pt-48 pt-36 overflow-x-hidden'>
+      <div className='flex flex-col md:flex-row justify-center items-center p-16 md:p-0'>
          <div className="flex flex-col md:flex-row justify-center items-center gap-16">
   {/* Section 1 */}
   <div className="flex flex-col md:flex-row gap-4 h-[400px]">
@@ -21,10 +22,17 @@ function SingleProduct() {
   </div>
 
   {/* section 2 */}
-<div className="w-full md:w-[400px] -mt-10 md:-mt-20 bg-zinc-900 rounded-xl p-4">
+<div className="w-full md:w-[400px] -mt-10 md:-mt-20 bg-zinc-200 rounded-xl p-4">
   <div className="flex flex-col">
     <h1 className="text-2xl md:text-3xl font-light mb-4">MAC PC</h1>
-    <img className="h-10 w-20" src="..." alt="" />              
+    <div className='flex gap-2'>
+    <img className="w-4" src={star} alt="" />            
+    <img className="w-4" src={star} alt="" />            
+    <img className="w-4" src={star} alt="" />            
+    <img className="w-4" src={star} alt="" />            
+    <img className="w-4" src={star} alt="" />            
+    </div>
+
     <span className="text-sm mt-2 font-bold">MRP</span>
     <h5 className="text-sm mt-2 text-blue-600">deal of the day</h5>
     <p className="text-sm mt-2 md:w-96 w-full">
