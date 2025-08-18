@@ -5,12 +5,10 @@ import { useContext } from 'react';
 import { AppContext } from "../Context/Productcontext"
 import { NavLink } from 'react-router';
 
-
-
 const FeatureSection = () => {
 
   const { isLoading, featureProduct } = useContext(AppContext)
-  console.log(featureProduct);
+  // console.log(featureProduct);
 
   if (isLoading) {
     return (
@@ -53,9 +51,10 @@ const FeatureSection = () => {
               minimumFractionDigits: 2,
             }).format(product.price / 100)
 
+            
             return (
               <NavLink to={`/singleproduct/${product.id}`} key={product.id}>
-
+                   
                 {/* <div data-aos="flip-left" className='relative w-full md:w-64 bg-gray-300 p-2 hover:transition-all hover:scale-105 md:hover:scale-110 cursor-pointer duration-300'>
               <div className='flex flex-col'>
                 <img src={product.image} alt="Service Icon" className='mb-4' />
